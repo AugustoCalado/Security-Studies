@@ -33,7 +33,7 @@ OAuth 2 defines four grant types, each of which is useful in different cases:
 
 ### Authorization Code
 Grant type based on redirection flow, which means that the application must be capable of interacting with the user-agent (i.e. the user’s web browser) and receiving API authorization codes that are routed through the user-agent.
-//TODO INSERT IMAGE
+![Abstract Protocol Flow](authCodeFlowOAuth2.png)
 
 1. Give the user **Authorization Code Link**
 `https://google.com/v1/oauth/authorize?response_type=code&client_id=CLIENT_ID&redirect_uri=CALLBACK_URL&scope=read`
