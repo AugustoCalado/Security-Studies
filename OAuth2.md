@@ -15,9 +15,8 @@ OAuth defines four roles:
 	-	The authorization server verifies the identity of the _user_ then issues access tokens to the _application_.
 
 
-## Abstract Protocol flow
-//TODO INSERT IMAGE
-
+## Abstract Protocol Flow
+![Abstract Protocol Flow](abstractFlowOAhtu2.png)
 1. Application (client) request to the user the authorization to access user's service resources.
 2. By approving the request of the application (client) the user provides to the application an **authorization grant**
 3. The application request an access token from the authorization server. It also send the **authorization grant** acquired from the previous step and its own identity.
