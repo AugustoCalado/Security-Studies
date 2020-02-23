@@ -3,7 +3,7 @@
 
 
 ## HTTP Authentication
-![HTTP Authentication Schemes](Resources/HTTP Authentication Schemes.png)
+![HTTP Authentication Schemes](Resources/http-authentication-schemes.png)
 
 ### Authentication vs Authorization
 **Authentication** is when an entity proves an identity. In other words, **Authentication** proves that you are who you say you are.
