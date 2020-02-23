@@ -31,6 +31,15 @@ One good point of using JWT is the integrity of the informatioin contained withi
 * **Authorization:** Once user is logged in, each subsequent request will inclide the JWT, allowing the user to access routes, services etc;
 * **Information Exchange:** JWT securely transmitting information between parties. Since it is signed, there is the assurance that the senders are who they say they are. Moreover, as the signature is calculated using the header and the payload, it is possible to verify that the content has not been tampered with.
 
+**JWT Structure**
+JSON Web Tokens consist of three parts separated by dots (.), which are:
+
+* Header: consists of two parts: the type of the token, which is JWT, and the signing algorithm being used, such as HMAC SHA256 or RSA.
+* Payload:  contains the claims (statements about an entity). There are alsol registred claim used by the JWT [see](https://tools.ietf.org/html/rfc7519#section-4.1)
+* Signature
+
+`xxxxx.yyyyy.zzzzz`
+
 ### API Keys
 An application programming interface key (API key) is a **unique identifier** (secret token) which is submitted alongside web service (or similar) requests in order to identify the origin of the request. 
 
