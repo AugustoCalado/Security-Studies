@@ -53,14 +53,46 @@ API keys are generally not considered secure; they are typically accessible to c
 
 ### OAuth
 
-## References
-[3-common-methods-api-authentication-explained/](https://nordicapis.com/3-common-methods-api-authentication-explained/)
-[when-why-api-key#security_of_api_keys](https://cloud.google.com/endpoints/docs/openapi/when-why-api-key#security_of_api_keys)
-[authentication - api-keys](https://cloud.google.com/docs/authentication/api-keys)
+## OpenID
+OpenID is an open standard for authentication. 
+
+### OpenID Connect 
+OpenID Connect is an identity layer on top of the OAuth 2.0 protocol. It allows clients o request and receive information about authenticated sessions as well as providing access to backend APIs using OAuth 2.0 tokens. In short, It gives an identity provider the ability to provide clients with enduser's identication and basic profile information.
+
+ It uses JWTs (JSON Web Tokens) as identity token format.
+
+The **Key Distribution** provided by OpenID Connect is called JSON Web Key Set (JWKS);
+
+**User Information**
+OpenID Connect provides endpoints for Clients to use when they need access to user data. It also provides mechanisms for the user to consent before this data is released to the client.
+
+**OpenID Connect Core Features**
+-   Core: authentication and use of Claims to communicate End-User information
+-   Discovery: stipulates how a client can dynamically determine information about OpenID Providers
+-   Dynamic Registration: dictates how a client can register with a provider
+-   Session Management: defines how to manage OIDC sessions
+
+## OpenID vs OAuth
+"OpenID is for humans logging into machines, OAuth is for machines logging into machines on behalf of humans."
+
+### SAML
+It’s an open standard that provides both authentication and authorization.
+
+
 
 ## Authorization
 ### Role-Based Access Control
 ### Attribute-Based Access Control
 ### Delegated Access Control with OAuth 2.0
+
+
+
+## References
+[3-common-methods-api-authentication-explained/](https://nordicapis.com/3-common-methods-api-authentication-explained/)
+[when-why-api-key#security_of_api_keys](https://cloud.google.com/endpoints/docs/openapi/when-why-api-key#security_of_api_keys)
+[authentication - api-keys](https://cloud.google.com/docs/authentication/api-keys)
+
+
+
 
 
