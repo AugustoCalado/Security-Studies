@@ -2,7 +2,7 @@
 
 
 
-## HTTP Authentication
+### HTTP Authentication
 ![HTTP Authentication Schemes](HTTP Authentication Schemes.png)
 
 ### Authentication vs Authorization
@@ -32,13 +32,13 @@ One good point of using JWT is the integrity of the informatioin contained withi
 * **Information Exchange:** JWT securely transmitting information between parties. Since it is signed, there is the assurance that the senders are who they say they are. Moreover, as the signature is calculated using the header and the payload, it is possible to verify that the content has not been tampered with.
 
 **JWT Structure**
-JSON Web Tokens consist of three parts separated by dots (.), which are:
+JSON Web Tokens consist of three parts separated by dots (.) `xxxxx.yyyyy.zzzzz` 
 
+Which are:
 * Header: consists of two parts: the type of the token, which is JWT, and the signing algorithm being used, such as HMAC SHA256 or RSA.
 * Payload:  contains the claims (statements about an entity). There are alsol registred claim used by the JWT [see](https://tools.ietf.org/html/rfc7519#section-4.1)
 * Signature
 
-`xxxxx.yyyyy.zzzzz`
 
 ### API Keys
 An application programming interface key (API key) is a **unique identifier** (secret token) which is submitted alongside web service (or similar) requests in order to identify the origin of the request. 
@@ -54,13 +54,13 @@ By identifying the calling project, you can use API keys to associate usage info
 
 API keys are generally not considered secure; they are typically accessible to clients, making it easy for someone to steal an API key. Once the key is stolen, it has no expiration, so it may be used indefinitely, unless the project owner revokes or regenerates the key.
 
-### When to use API Keys
+#### When to use API Keys?
 * Block anonymous traffic. API keys identify an application's traffic. That maybe is useful if there are some need to debug an issue or show the application's usage
 * Controll the number of call made to your API
 * Identify usage pattern
 * Filter logs by API Keys
 
-#### When not use API Keys
+#### When not use API Keys?
 * Identify individual users
 * Secure authorization
 * identify the creators of a project
@@ -71,7 +71,10 @@ API keys are generally not considered secure; they are typically accessible to c
 ### OAuth
 OAuth is an open-standard authorization protocol or framework that describes how unrelated servers and services can safely allow authenticated access to their assets without actually sharing the initial, related, single logon credential.
 
-## OpenID
+### OAuth 2
+OAuth 2 is an authorization framework that enables applications to obtain limited access to user accounts on an HTTP service, such as Facebook and Google. It works by delegating user authentication to the service that **hosts the user account** and authorizing third-party applications to access the user account.
+
+### OpenID
 OpenID is an open standard for authentication. 
 
 ### OpenID Connect 
@@ -90,13 +93,11 @@ OpenID Connect provides endpoints for Clients to use when they need access to us
 -   Dynamic Registration: dictates how a client can register with a provider
 -   Session Management: defines how to manage OIDC sessions
 
-## OpenID vs OAuth
+### OpenID vs OAuth
 "OpenID is for humans logging into machines, OAuth is for machines logging into machines on behalf of humans."
 
 ### SAML
 It’s an open standard that provides both authentication and authorization.
-
-
 
 ## Authorization
 ### Role-Based Access Control
