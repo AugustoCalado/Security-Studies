@@ -5,12 +5,12 @@
 Both TLS (Transport Layer Security) and SSL (Secure Sockets Layer) are cryptographic protocols that provide security over a network. The TLS is the evolution (the most updated version) of SSL which now is deprecated since 2015 by the IETF (Internet Engineering Task Force).
 
 ## HTTPS
-HTTPS is the HTTP procotol running over TLS, in other words is the secured version of HTTP. By using HTTPS every packet transferred between client and server is encrypted using public or private key cryptography.
+HTTPS is the HTTP procotol running over TLS, in other words is the secured version of HTTP. By using HTTPS **every packet** transferred between client and server is **encrypted** using public or private key cryptography.
 
 ### What does HTTPS ensure?
-1. Privacy - It means that no one can eavesdrop on your messages
-2. Integrity - It means that the message is not manipulated on the way to its destination
-3. Identification - It means that the site that are been visited is indeed the one that should be visited not a fake one.
+1. **Privacy** - It means that no one can eavesdrop on your messages
+2. **Integrity** - It means that the message is not manipulated on the way to its destination
+3. **Identification** - It means that the site that are been visited is indeed the one that should be visited not a fake one.
 
 ### Encryptation Algorithms
 1. **Symmetric Key Algorithm** 
@@ -35,7 +35,7 @@ Anyone with access to Alice's public key can verify that a message (signature) c
 ## CA - Certification Authority
 How to make sure that the party we are talking to is actually who they claim they are? This is where the certificate authority comes in.
 
-A certificate authority (CA) is a third-party organization with 3 main objectives.
+A certificate authority (CA) is a third-party organization with 3 main **objectives**.
 1. Issuing Certificates
 2. Confirming the identity of the certificate owner
 3. Provide proofthat the certificate is valid
@@ -57,7 +57,7 @@ When a CA issues a certificate, they sign the certificate with their root certif
 * Now it is the **root certificate**. 
 * The entire certificate chain is trusted, and thus the site certificate is trusted as well.
 
-### How to get a certificante from a CA?
+### How to get a certificate from a CA?
 1. Create a **Certificate Signing Request** with the key pair (public and private key)
 2. Ask a CA to sign  the provided certificate from step 1 with its private key (anyone who has the public key of the CA can verify that it was actually signed by the CA)
 
