@@ -28,9 +28,9 @@ Any message encrypted with Bob's public key can only be decrypted with Bob's pri
 Anyone with access to Alice's public key can verify that a message (signature) could only have been created by someone with access to Alice"s private key
 
 ## Digital Certificates
-
+[TO STUDY](https://www.geeksforgeeks.org/digital-signatures-certificates/)
 ## Digital Signatures
-
+[TO STUDY](https://www.geeksforgeeks.org/digital-signatures-certificates/)
 
 ## CA - Certification Authority
 How to make sure that the party we are talking to is actually who they claim they are? This is where the certificate authority comes in.
@@ -59,22 +59,50 @@ When a CA issues a certificate, they sign the certificate with their root certif
 
 ### How to get a certificate from a CA?
 1. Create a **Certificate Signing Request** with the key pair (public and private key)
-2. Ask a CA to sign  the provided certificate from step 1 with its private key (anyone who has the public key of the CA can verify that it was actually signed by the CA)
+2. Ask a **CA to sign** the provided certificate from step 1 **with its private key** **(anyone who has the public key of the CA can verify that it was actually signed by the CA)**
 
  Now that the requester has its certificate signed by a CA, everyone who needs to verify its identity checks if the certified provided is signed by a CA by using the CA public key to authenticate. If it was a valid certificate (the one signed by a CA), we can securely use the public key "attached" in the certificate to send our secret key. From now on the communication will be encrypted. 
 
 ## The HTTPS Handshake
-The process to established a secure connection to transmit messages is called handshake. Here some agreements are made in order to determine how to communicate securely.
+The **process to established a secure connection** to transmit messages is called **handshake**. Here some agreements are made in order to determine how to communicate securely.
 
-1. The client send a list of ssl/tls versions and encryption algorithms (**Cypher Ssuite**) that it can works. 
+1. The client send a list of SSL/TLS  versions and encryption algorithms (**Cypher Suite**) that it can works. 
 2. The server choose the best SSL/TLS version and encryption algorithm and reply with its certificate which includes public key, so they can verify the server identity.
-3. Client verifies the received certificate against a CA using it's public key. If the validation is consistent, the client generates a "pre master key" that is encrypted by the server public key. In the end the client that a request to the server with the generated content.
+3. Client verifies the received certificate against a CA using it's public key. If the validation is consistent, the client generates a "pre master key" that is encrypted by the server public key. In the end the client send a request to the server with the generated content.
 4. The server decrypt the "pre master key".
 5. Both server and client have generated the same "shared secret" that they are going to use as a symmetric key
 
 ## Keystore and Truststore
+[TO STUDY](https://www.educative.io/edpresso/keystore-vs-truststore)
 
+### Keystore
+Keystore is used to store private key and identity certificates that a specific program should present to both parties (server or client) for verification.
+
+**Used to store the server keys (both public and private) along with signed cert**
+
+Nubank Quote: "Keystore não pode ter um certificado da CA interna, pois estes não são válidos para tais clientes externos. É necessário um certificado externo, que para simplificar, pode ser o mesmo para todos os serviços."
+
+### Truststore
+Truststore is  is used to store certificates from Certified Authorities (CA) that verify the certificate presented by the server in SSL connection.
+
+Nubank Quote: "A truststore armazena os certificados de confiança usados para verificar os certificados de clientes recebidos. Todos os certificados dos troncos e da raiz da CA interna ficam na truststore."
+
+* represents the list of trusted parties you intend to communicate with
+
+### Handshake Exemplification
+During the SSL handshake,
+
+1.  A client tries to access https://
+    
+2.  And thus, Server responds by providing a SSL certificate (which is stored in its keyStore)
+    
+3.  Now, the client receives the SSL certificate and verifies it via trustStore (i.e the client's trustStore already has pre-defined set of certificates which it trusts.). Its like : Can I trust this server ? Is this the same server whom I am trying to talk to ? No middle man attacks ?
+    
+4.  Once, the client verifies that it is talking to server which it trusts, then SSL communication can happen over a shared secret key.
+
+**WARNING:** If a server wants to do a client authentication too, then the server also maintains a trustStore to verify client.
 
 
 ## References 
 [How Http Works]([https://howhttps.works/the-handshake/](https://howhttps.works/the-handshake/))
+[Trust Store vs Key Store - creating with keytool](https://stackoverflow.com/questions/6340918/trust-store-vs-key-store-creating-with-keytool)](https://stackoverflow.com/questions/6340918/trust-store-vs-key-store-creating-with-keytool)
