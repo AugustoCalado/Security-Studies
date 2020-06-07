@@ -2,7 +2,7 @@
 - https://dzone.com/articles/ssl-in-java 
 - https://www.javacodegeeks.com/2013/06/java-security-tutorial-step-by-step-guide-to-create-ssl-connection-and-certificates.html
 - https://www.thesslstore.com/new-to-ssl/what-is-ssl-tls.aspx
-
+---
 - https://www.snaplogic.com/glossary/two-way-ssl-java-example
 - https://tyk.io/docs/basic-config-and-security/security/tls-and-ssl/mutual-tls/
 - https://dev.to/hexagonkt/mutual-tls-authentication-in-rest-services-with-kotlin-389p
@@ -23,7 +23,6 @@
 - https://github.com/alfio-event/alf.io-PI/blob/bf84ae7190dbbaf266f324d46ead96062c07ce9b/backend/src/main/kotlin/alfio/pi/Application.kt
 ---
 
-
 - https://www.instantssl.com/digital-signature
 - https://www.geeksforgeeks.org/digital-signatures-certificates/
 - https://www.docusign.com/how-it-works/electronic-signature/digital-signature/digital-signature-faq
@@ -35,16 +34,15 @@ moreofless.co.uk/java-keystore-truststore-difference-certificate/
 - https://comparecheapssl.com/differences-between-keystore-truststore-2/
 - https://stackoverflow.com/questions/6157550/what-is-the-difference-between-a-pkcs12-keystore-and-a-pkcs11-keystore/6157716#6157716
 
+---
 - https://www.mayrhofer.eu.org/post/create-x509-certs-in-java/
 - https://docs.oracle.com/cd/E19509-01/820-3503/6nf1il6er/index.html
 - https://www.digicert.com/kb/ssl-support/openssl-quick-reference-guide.htm
 - https://stackoverflow.com/questions/19604668/use-and-utility-of-p12-certificate-file
 - https://stackoverflow.com/questions/12334468/java-sign-certificate-programmatically-without-bc
 - https://stackoverflow.com/questions/21912390/decode-read-a-csr-certificate-signing-request-using-java-or-bouncycastle
-
 - https://docs.oracle.com/cd/E54932_01/doc.705/e54936/cssg_create_ssl_cert.htm#CSVSG181
 
-
-
+---
 - https://robertheaton.com/2014/03/27/how-does-https-actually-work/
 - https://howdns.works/
