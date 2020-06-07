@@ -1,0 +1,9 @@
+https://dzone.com/articles/ssl-in-java 
+https://robertheaton.com/2014/03/27/how-does-https-actually-work/
+https://howdns.works/
+https://tyk.io/docs/basic-config-and-security/security/tls-and-ssl/mutual-tls/
+https://github.com/s1monw1/TlsLibrary
+https://github.com/Hakky54/mutual-tls-ssl
+https://dev.to/hexagonkt/mutual-tls-authentication-in-rest-services-with-kotlin-389p
+moreofless.co.uk/java-keystore-truststore-difference-certificate/
+https://www.baeldung.com/java-keystore-truststore-difference
